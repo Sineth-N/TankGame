@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace TankGame
 {
-    class Program
+    public class Main
     {
-        static void Main(string[] args)
+         public int testMethod(int i)
         {
-            
+            return i;
         }
-       
     }
 }
