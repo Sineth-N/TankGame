@@ -44,8 +44,8 @@ namespace TankGame.Player
         }
         public void ToString()
         {
-            Console.WriteLine("Player Number:" + this.playerNumber + "\n X Coordinate" + this.playerLocationX
-                + "\n Y Coordinate" + this.playerLocationY + "\n Current Direction " + this.direction
+            Console.WriteLine("Player Number " + this.playerNumber + "\n X Coordinate " + this.playerLocationX
+                + "\n Y Coordinate " + this.playerLocationY + "\n Current Direction " + this.direction
                 );
         }
 
