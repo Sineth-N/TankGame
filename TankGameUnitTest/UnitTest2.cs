@@ -29,6 +29,7 @@ namespace TankGameUnitTest
         public void AcceptanceTest()
         {
             Assert.AreEqual(1, main.acceptance("s:p1:1,1:0#"));
+            
         }
 
     }
