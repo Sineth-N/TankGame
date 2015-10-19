@@ -8,9 +8,21 @@ namespace TankGame
 {
     public class Main
     {
-         public int testMethod(int i)
+        public String joinserver()
         {
-            return i;
+            return "JOIN#";
         }
+        public int serverJoinReply(String reply)
+        {
+            switch(reply){
+                case "PLAYERS_FULL#" :return 1;
+                case "ALREADY_ADDED#" : return 2;
+                case "GAME_ALREADY_STARTED#": return 3;
+                default: return 0;
+            }
+                            
+        }
+
+
     }
 }

@@ -1,17 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TankGame;
+
 namespace TankGameUnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest2
     {
+        Main main = new Main();
         [TestMethod]
-        public void TestMethod1()
+        public void LoginReqTest()
         {
-            Main main=new Main();
-            Assert.AreEqual(1, main.testMethod(1));
+            Assert.AreEqual("JOIN#", main.joinserver());
         }
-
     }
 }
