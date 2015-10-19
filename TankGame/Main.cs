@@ -26,7 +26,10 @@ namespace TankGame
                             
         }
 
-        private void testMethod() { }
+        private void testMethod() 
+        {
+            Console.WriteLine("Test");
+        }
 
 
     }
