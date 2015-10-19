@@ -10,7 +10,7 @@ namespace TankGame
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Sineth");
         }
     }
 }
