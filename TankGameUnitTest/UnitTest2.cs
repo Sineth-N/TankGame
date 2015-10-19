@@ -13,5 +13,10 @@ namespace TankGameUnitTest
         {
             Assert.AreEqual("JOIN#", main.joinserver());
         }
+        [TestMethod]
+        public void LoginReplyTest()
+        {
+            Assert.AreEqual(1, main.serverJoinReply("PLAYERS_FULL#"));
+        }
     }
 }

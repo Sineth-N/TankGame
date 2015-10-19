@@ -8,6 +8,9 @@ namespace TankGame
 {
     public class Main
     {
+        private const String PLAYERS_FULL ="PLAYERS_FULL#" ;
+        private const String ALREADY_ADDED= "ALREADY_ADDED#";
+        private const String GAME_ALREADY_STARTED = "GAME_ALREADY_STARTED";
         public String joinserver()
         {
             return "JOIN#";
