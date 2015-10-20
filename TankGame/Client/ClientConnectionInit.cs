@@ -39,6 +39,10 @@ namespace TankGame.Client
 
         }
 
+        public void writeToServer() { 
+        
+        }
+
 
        
     }
