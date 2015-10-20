@@ -33,6 +33,7 @@ namespace TankGame.Client
            while(true){}//To keep the programme running
      
         }
+        public void testMethod() { }
 
        
 
