@@ -58,6 +58,8 @@ namespace TankGame
                 {
                     char[] resCharArray = { ';' };
                     String[] brickWalls = tokens[2].Split(resCharArray);
+                    String[] stone = tokens[3].Split(resCharArray);
+                    String[] water = tokens[4].Split(resCharArray);
                 }
                 else
                 {

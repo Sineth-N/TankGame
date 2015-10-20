@@ -41,7 +41,7 @@ namespace TankGame.ServerConn
 
                     //Fetch the messages from the server
                     int asw = 0;
-                    //create a network stream using connecion
+                    //create a network stream using connection
                     NetworkStream serverStream = new NetworkStream(connection);
                     List<Byte> inputStr = new List<byte>();
 
