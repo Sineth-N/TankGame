@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientConnectionInit.cs" />
     <Compile Include="Client\ClientConnectionInit.cs" />
     <Compile Include="InitConnectionFromServer.cs" />
     <Compile Include="Main.cs" />
