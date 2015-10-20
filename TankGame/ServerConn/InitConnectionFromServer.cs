@@ -37,7 +37,7 @@ namespace TankGame.ServerConn
 
                     connection = listener.AcceptSocket();   //connection is connected socket
 
-                    Console.WriteLine("Connetion is established");
+                    //Console.WriteLine("Connetion is established");
 
                     //Fetch the messages from the server
                     int asw = 0;
@@ -56,9 +56,10 @@ namespace TankGame.ServerConn
 
                     Main torkenizer = new Main();
                     Console.Write("Response from server to join "+torkenizer.serverJoinReply(messageFromServer));
-                    Console.WriteLine(messageFromServer);
+                    //Console.WriteLine(messageFromServer);
+                    torkenizer.initiation(messageFromServer);
 
-
+                        
 
                     serverStream.Close();       //close the netork stream
                     

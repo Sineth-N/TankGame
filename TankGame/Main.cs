@@ -60,6 +60,8 @@ namespace TankGame
                     String[] brickWalls = tokens[2].Split(resCharArray);
                     String[] stone = tokens[3].Split(resCharArray);
                     String[] water = tokens[4].Split(resCharArray);
+
+                    Console.WriteLine("Brick Walls are: "+brickWalls.ToString());
                 }
                 else
                 {
