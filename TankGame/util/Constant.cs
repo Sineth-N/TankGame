@@ -56,13 +56,6 @@ namespace TankGame.util
         public static int BRICK_POINTS = int.Parse(ConfigurationManager.AppSettings.Get("BrickPoints"));
         public static int PLUNDER_TREASUR_LIFE = int.Parse(ConfigurationManager.AppSettings.Get("PlunderCoinPileLife"));
 
-
-
-
-
-
-
-
         public static int MAP_SIZE = int.Parse(ConfigurationManager.AppSettings.Get("MapSize"));
         public static int MAX_BRICKS = int.Parse(ConfigurationManager.AppSettings.Get("MaxBricks"));
         public static int MAX_OBSTACLES = int.Parse(ConfigurationManager.AppSettings.Get("MaxObs"));

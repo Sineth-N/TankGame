@@ -12,15 +12,5 @@ namespace TankGame.Player
         public int playerLocationX { get; set; }
         public int playerLocationY { get; set; }
         public int direction { get; set; }
-
-
-        public override string ToString()
-        {
-            return "Player Number " + this.playerNumber + "\n X Coordinate " + this.playerLocationX
-                + "\n Y Coordinate " + this.playerLocationY + "\n Current Direction " + this.direction
-                ;
-        }
-
-
     }
 }
