@@ -30,12 +30,11 @@ namespace TankGame.Client
            stream.Write(ba,0,ba.Length);
            stream.Flush();
            stream.Close();
-
-          
-           while(true){}
+           while(true){}//To keep the programme running
      
-
         }
+
+       
 
     }
 }
