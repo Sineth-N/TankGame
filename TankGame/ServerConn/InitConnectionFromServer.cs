@@ -34,23 +34,33 @@ namespace TankGame.ServerConn
                 //Establish connection upon server request
                 while (true)
                 {
-                    //connection is connected socket
-                    connection = listener.AcceptSocket();
+
+                    connection = listener.AcceptSocket();   //connection is connected socket
 
                     Console.WriteLine("Connetion is established");
 
                     //Fetch the messages from the server
                     int asw = 0;
+                    //create a network stream using connecion
                     NetworkStream serverStream = new NetworkStream(connection);
                     List<Byte> inputStr = new List<byte>();
+
+                    //fetch messages from  server
                     while (asw != -1)
                     {
                         asw = serverStream.ReadByte();
                         inputStr.Add((Byte)asw);
-                        //Console.WriteLine(inputStr[i++]);
                     }
-                    Console.WriteLine(Encoding.UTF8.GetString(inputStr.ToArray()));
-                    serverStream.Close();
+
+                    String messageFromServer = Encoding.UTF8.GetString(inputStr.ToArray());
+
+                    Main torkenizer = new Main();
+                    Console.Write("Response from server to join "+torkenizer.serverJoinReply(messageFromServer));
+                    Console.WriteLine(messageFromServer);
+
+
+
+                    serverStream.Close();       //close the netork stream
                     
                    
 
