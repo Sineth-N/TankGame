@@ -12,8 +12,8 @@ namespace TankGame.Client
 {
     class ClientConnectionInit
     {
-        static System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();
-        static NetworkStream stream;
+        static System.Net.Sockets.TcpClient clientSocket = new System.Net.Sockets.TcpClient();      //create a TcpCLient socket to connect to server
+        static NetworkStream stream=null;
 
         public static void Connect()
         {
@@ -27,15 +27,19 @@ namespace TankGame.Client
            for (int x = 0; x < ba.Length;x++ ) {
                Console.WriteLine(ba[x]);
            }
-           stream.Write(ba,0,ba.Length);
-           stream.Flush();
-           stream.Close();
 
+           stream.Write(ba,0,ba.Length);        //send join# to server
+           stream.Flush();
+           stream.Close();          //close network stream
+
+           
           
-           while(true){}
+           
      
 
         }
 
+
+       
     }
 }

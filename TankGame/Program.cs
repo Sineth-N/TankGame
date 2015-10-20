@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TankGame.Client;
 
@@ -14,6 +15,10 @@ namespace TankGame
         {
             //init client connection to server
             ClientConnectionInit.Connect();
+            
+            //init a socket for call back from the server to fetch messages
+            new ServerConn.InitConnectionFromServer().waitForConnection();
+            while (true) { }
         }
        
     }
