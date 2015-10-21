@@ -28,8 +28,14 @@ namespace TankGameUnitTest
         [TestMethod]
         public void AcceptanceTest()
         {
-            Assert.AreEqual(1, main.acceptance("s:p1:1,1:0#"));
+            Assert.AreEqual(1, main.acceptance("S:P1:1,1:0#"));
             
+        }
+        [TestMethod]
+        public void InitializationTest()
+        {
+            main.acceptance("S:P1:1,1:0#");
+            main.initiation("I:P1:1,1;0,0;2,2:3,3;5,5;4,4:7,7;6,6#?");
         }
 
     }
