@@ -59,8 +59,15 @@ namespace TankGame.ServerConn
                     Console.WriteLine(messageFromServer);
                     if (messageFromServer.StartsWith("I") && messageFromServer.EndsWith("#"))
                     {
-                        Console.WriteLine("scas");
                         torkenizer.initiation(messageFromServer);
+                    }
+                    else if(messageFromServer.StartsWith("S") && messageFromServer.EndsWith("#"))
+                    {
+                        torkenizer.acceptance(messageFromServer);
+                    }
+                    else if (messageFromServer.StartsWith("G") && messageFromServer.EndsWith("#"))
+                    {
+                        
                     }
 
                     serverStream.Close();       //close the netork stream
