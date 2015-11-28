@@ -37,7 +37,7 @@ namespace TankGame.ServerConn
                     //connection is connected socket
                     connection = listener.AcceptSocket();
 
-                    Console.WriteLine("Connetion is ok");
+                    Console.WriteLine("Connetion is established");
 
                     //Fetch the messages from the server
                     int asw = 0;
