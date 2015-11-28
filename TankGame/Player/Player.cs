@@ -8,46 +8,19 @@ namespace TankGame.Player
 {
     class Player
     {
-        private int playerNumber;
-        private int playerLocationX;
-        private int playerLocationY;
-        private int direction;
+        public int playerNumber { get; set; }
+        public int playerLocationX { get; set; }
+        public int playerLocationY { get; set; }
+        public int direction { get; set; }
 
-        public void setPlayerNumber(int number)
-        {
-            this.playerNumber = number;
-        }
-        public int getPlayerNumber()
-        {
-            return playerNumber;
-        }
-        public void setPlayerLocationX(int x)
-        {
-            this.playerLocationX = x;
-        }
-        public int getPlayerLocationX()
-        {
-            return playerLocationX;
-        }
-        public void setPlayerLocationY(int y)
-        {
-            this.playerLocationY = y;
-        }
-        public int getPlayerLocationY()
-        {
-            return playerLocationY;
-        }
 
-        public void setDirection(int p)
+        public override string ToString()
         {
-            this.direction = p;
-        }
-        public void ToString()
-        {
-            Console.WriteLine("Player Number " + this.playerNumber + "\n X Coordinate " + this.playerLocationX
+            return "Player Number " + this.playerNumber + "\n X Coordinate " + this.playerLocationX
                 + "\n Y Coordinate " + this.playerLocationY + "\n Current Direction " + this.direction
-                );
+                ;
         }
+
 
     }
 }
