@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -28,6 +29,9 @@ namespace TankGame.Client
            }
            stream.Write(ba,0,ba.Length);
            stream.Flush();
+           stream.Close();
+
+          
            while(true){}
      
 
