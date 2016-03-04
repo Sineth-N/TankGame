@@ -10,7 +10,8 @@ namespace TankGame.util
 {
     class Constant
     {
-        #region "C2S - Client To Server"
+        
+#region "C2S - Client To Server"
         public const string C2S_INITIALREQUEST = "JOIN#";
         public const string UP = "UP#";
         public const string DOWN = "DOWN#";
@@ -18,7 +19,6 @@ namespace TankGame.util
         public const string RIGHT = "RIGHT#";
         public const string SHOOT = "SHOOT#";
         #endregion
-
         #region "S2C - Server To Client"
         public const string S2C_DEL = "#";
 
@@ -55,13 +55,6 @@ namespace TankGame.util
         public static int PLAYER_HEALTH = int.Parse(ConfigurationManager.AppSettings.Get("PlayerHealth"));
         public static int BRICK_POINTS = int.Parse(ConfigurationManager.AppSettings.Get("BrickPoints"));
         public static int PLUNDER_TREASUR_LIFE = int.Parse(ConfigurationManager.AppSettings.Get("PlunderCoinPileLife"));
-
-
-
-
-
-
-
 
         public static int MAP_SIZE = int.Parse(ConfigurationManager.AppSettings.Get("MapSize"));
         public static int MAX_BRICKS = int.Parse(ConfigurationManager.AppSettings.Get("MaxBricks"));

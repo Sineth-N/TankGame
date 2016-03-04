@@ -13,12 +13,15 @@ namespace TankGame
     {
         static void Main(string[] args)
         {
+ 
             //init client connection to server
             ClientConnectionInit.Connect();
             
             //init a socket for call back from the server to fetch messages
             new ServerConn.InitConnectionFromServer().waitForConnection();
+ 
             while (true) { }
+
         }
        
     }

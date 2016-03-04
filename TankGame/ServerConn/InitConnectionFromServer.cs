@@ -37,11 +37,11 @@ namespace TankGame.ServerConn
 
                     connection = listener.AcceptSocket();   //connection is connected socket
 
-                    Console.WriteLine("Connetion is established");
+                    //Console.WriteLine("Connetion is established");
 
                     //Fetch the messages from the server
                     int asw = 0;
-                    //create a network stream using connecion
+                    //create a network stream using connection
                     NetworkStream serverStream = new NetworkStream(connection);
                     List<Byte> inputStr = new List<byte>();
 
@@ -55,10 +55,20 @@ namespace TankGame.ServerConn
                     String messageFromServer = Encoding.UTF8.GetString(inputStr.ToArray());
 
                     Main torkenizer = new Main();
-                    Console.Write("Response from server to join "+torkenizer.serverJoinReply(messageFromServer));
+                    //Console.Write("Response from server to join "+torkenizer.serverJoinReply(messageFromServer));
                     Console.WriteLine(messageFromServer);
-
-
+                    if (messageFromServer.StartsWith("I") && messageFromServer.EndsWith("#"))
+                    {
+                        torkenizer.initiation(messageFromServer);
+                    }
+                    else if(messageFromServer.StartsWith("S") && messageFromServer.EndsWith("#"))
+                    {
+                        torkenizer.acceptance(messageFromServer);
+                    }
+                    else if (messageFromServer.StartsWith("G") && messageFromServer.EndsWith("#"))
+                    {
+                        
+                    }
 
                     serverStream.Close();       //close the netork stream
                     
